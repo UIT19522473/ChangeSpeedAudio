@@ -77,7 +77,11 @@ const App = () => {
       <div className="container-xxl wrap-control">
         <div className="d-flex justify-content-center align-content-center">
           <audio class="custom-audio" controls autoPlay ref={audioRef} />
+          <label disabled={true} className="labelspeed" htmlFor="speed">
+            Speed
+          </label>
           <input
+            disabled={audioRef.current ? false : true}
             type="number"
             placeholder="Speed"
             aria-label="Speed"
@@ -85,6 +89,8 @@ const App = () => {
             onChange={(e) => setPickRate(e.target.value)}
             step="0.1"
             className="changespeed"
+            value={pickRate || ""}
+            name="speed"
           />
         </div>
       </div>
