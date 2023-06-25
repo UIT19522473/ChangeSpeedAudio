@@ -70,11 +70,7 @@ const App = () => {
         />
       </div>
       <div className="container-xxl wrap-middle">
-        <div
-          className={`wrap-img ${
-            audioRef.current && !isPlaying ? "" : "rotate-element"
-          }`}
-        >
+        <div className={isPlaying ? "wrap-img rotate-element" : "wrap-img"}>
           <img className="image-fluid" src={ImgDish} alt="logo" />
         </div>
       </div>
