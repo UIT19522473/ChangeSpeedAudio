@@ -12,7 +12,7 @@ const App = () => {
 
   useEffect(() => {
     if (audioRef.current) {
-      if (pickRate == "") {
+      if (pickRate == null) {
         audioRef.current.playbackRate = 1;
         setPickRate(1);
       } else if (pickRate > 15) {
