@@ -66,7 +66,7 @@ const App = () => {
           type="file"
           id="audio"
           required
-          className="mt-5"
+          className="input-audio"
         />
       </div>
       <div className="container-xxl wrap-middle">
